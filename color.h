@@ -7,9 +7,9 @@
 // Color Utility Functions
 void writeColor(std::ostream &out, color pixelColor) {
     // Write [0, 255] value of each color
-    out << (256 * pixelColor.x()) << ' '
-        << (256 * pixelColor.y()) << ' '
-        << (256 * pixelColor.z()) << '\n';
+    out << static_cast<int>(256 * pixelColor.x()) << ' '
+        << static_cast<int>(256 * pixelColor.y()) << ' '
+        << static_cast<int>(256 * pixelColor.z()) << '\n';
 }
 
 #endif
