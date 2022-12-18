@@ -87,4 +87,7 @@ inline Vector crossProduct(const Vector &v1, const Vector &v2) {
                   v1.c[0] * v2.c[1] - v1.c[1] * v2.c[0]);
 }
 
+// Type Aliases
+using color = Vector;  // RGB color
+
 #endif
