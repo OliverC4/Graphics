@@ -5,11 +5,11 @@
 #include "vector.h"
 
 // Color Utility Functions
-void writeColor(std::ostream &out, Color pixelColor) {
+void writeColor(std::ostream &out, Color pixel_color) {
     // Write [0, 255] value of each color
-    out << static_cast<int>(256 * pixelColor.x()) << ' '
-        << static_cast<int>(256 * pixelColor.y()) << ' '
-        << static_cast<int>(256 * pixelColor.z()) << '\n';
+    out << static_cast<int>(256 * pixel_color.x()) << ' '
+        << static_cast<int>(256 * pixel_color.y()) << ' '
+        << static_cast<int>(256 * pixel_color.z()) << '\n';
 }
 
 #endif
