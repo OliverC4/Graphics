@@ -28,10 +28,10 @@ class Vector {
             return *this;
         }
 
-        Vector operator*=(const double n) {
-            c[0] *= n;
-            c[1] *= n;
-            c[2] *= n;
+        Vector operator*=(const double t) {
+            c[0] *= t;
+            c[1] *= t;
+            c[2] *= t;
             return *this;
         } 
 
@@ -61,16 +61,16 @@ inline Vector operator*(const Vector &v1, const Vector &v2) {
     return Vector(v1.c[0] * v2.c[0], v1.c[1] * v2.c[1], v1.c[2] * v2.c[2]);
 }
 
-inline Vector operator*(double n, const Vector &v) {
-    return Vector(n * v.c[0], n * v.c[1], n * v.c[2]);
+inline Vector operator*(double t, const Vector &v) {
+    return Vector(t * v.c[0], t * v.c[1], t * v.c[2]);
 }
 
-inline Vector operator*(const Vector &v, double n) {
-    return n * v;
+inline Vector operator*(const Vector &v, double t) {
+    return t * v;
 }
 
-inline Vector operator/(Vector v, double n) {
-    return (1/n) * v;
+inline Vector operator/(Vector v, double t) {
+    return (1/t) * v;
 }
 
 inline Vector unitVector(const Vector v) {
@@ -88,6 +88,7 @@ inline Vector crossProduct(const Vector &v1, const Vector &v2) {
 }
 
 // Type Aliases
-using color = Vector;  // RGB color
+using Point = Vector;  // 3D point
+using Color = Vector;  // RGB color
 
 #endif
