@@ -15,8 +15,8 @@ class Ray {
         Ray(const Point& orig, const Vector& dir) : origin(orig), direction(dir) {};
 
         // Methods
-        Point origin() const { return origin; }
-        Vector direction() const { return direction; }
+        Point getOrigin() const { return origin; }
+        Vector getDirection() const { return direction; }
 
         Point isAt(double t) const {
             return origin + t * direction;
