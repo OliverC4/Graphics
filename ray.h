@@ -6,20 +6,20 @@
 class Ray {
     public:
         // Variables
-        Point origin;
-        Vector direction;
+        Point orig;
+        Vector dir;
 
         // Empty Ray Constructor
         Ray() {};
         // Overloaded Ray Constructor
-        Ray(const Point& orig, const Vector& dir) : origin(orig), direction(dir) {};
+        Ray(const Point& origin, const Vector& direction) : orig(origin), dir(direction) {};
 
         // Methods
-        Point getOrigin() const { return origin; }
-        Vector getDirection() const { return direction; }
+        Point origin() const { return orig; }
+        Vector direction() const { return dir; }
 
         Point isAt(double t) const {
-            return origin + t * direction;
+            return orig + t * dir;
         }
 };
 
